@@ -93,3 +93,16 @@ tls {
 ```
 
 Or with Caddy JSON to the `acme` module: [`challenges.dns.provider.resolvers: ["1.1.1.1"]`](https://caddyserver.com/docs/json/apps/tls/automation/policies/issuer/acme/challenges/dns/resolvers/).
+
+### Error: `expected 1 zone, got 0 for ...`
+
+In order for the DNS challenge to succeed, your domain must be resolved by a public DNS server. For instance, if your domain happens to be defined in `/etc/hosts`, or being resolved by a local DNS server, the challenge will fail with this error.
+
+The issue can be fixed either by changing the DNS configuration of the system running Caddy, or by adding a custom `resolver` to the [`tls` directive](https://caddyserver.com/docs/caddyfile/directives/tls):
+
+```
+tls {
+  dns cloudflare {env.CF_API_TOKEN}
+  resolvers 1.1.1.1
+}
+```
