@@ -6,7 +6,7 @@ toolchain go1.24.2
 
 require (
 	github.com/caddyserver/caddy/v2 v2.7.5
-	github.com/libdns/cloudflare v0.2.1
+	github.com/libdns/cloudflare v0.2.2
 )
 
 require (
@@ -19,7 +19,7 @@ require (
 	github.com/google/pprof v0.0.0-20210720184732-4bb14d4b1be1 // indirect
 	github.com/google/uuid v1.3.1 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.10 // indirect
-	github.com/libdns/libdns v1.0.0-beta.1 // indirect
+	github.com/libdns/libdns v1.1.0 // indirect
 	github.com/matttproud/golang_protobuf_extensions v1.0.4 // indirect
 	github.com/mholt/acmez/v3 v3.1.2 // indirect
 	github.com/miekg/dns v1.1.65 // indirect
